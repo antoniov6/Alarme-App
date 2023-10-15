@@ -102,3 +102,62 @@ button#set:hover {
   border-color: #0d47a1;
   color: #0d47a1;
 }
+
+.alarm {
+  display: grid;
+  grid-template-columns: 9fr 1fr 2fr;
+  margin-top: 1.5em;
+  align-items: center;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.6em;
+}
+
+.alarm input[type="checkbox"] {
+  appearance: none;
+  height: 1.6em;
+  width: 3.75em;
+  background-color: #e2e2e2;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.alarm input[type="checkbox"]::before {
+  position: absolute;
+  content: "";
+  background-color: #757575;
+  height: 1.1em;
+  width: 1.5em;
+  border-radius: 3px;
+  top: 0.25em;
+  left: 0.3em;
+}
+
+.alarm input[type="checkbox"]:checked {
+  background-color: #b3e5fc;
+}
+
+.alarm input[type="checkbox"]:checked::before {
+  background-color: #0d47a1;
+  left: 2em;
+}
+
+.deleteButton {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+  color: #0d47a1;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 80%;
+  }
+}
